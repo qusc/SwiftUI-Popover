@@ -1,6 +1,6 @@
 # SwiftUI Popover
 
-<img src="Assets/demo.gif" width="320" align="right" />
+<img src="Assets/demo.gif" width="320" align="right" style="margin-left: 16px;" />
 
 Lightweight, SwiftUI-only, composable popovers. Attach any custom popover view to any other view deep in your view hierarchy.
 No UIKit-based hacks. Works across all SwiftUI platforms.
@@ -121,6 +121,12 @@ struct ContentView: View {
 ```
 
 See the example app in the `Example/` directory.
+
+## Real-world example
+
+A short clip from a production app using `SwiftUI-Popover`:
+
+<img src="Assets/production-app.gif" width="320" />
 
 ---
 
