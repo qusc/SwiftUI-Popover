@@ -22,8 +22,11 @@ struct ContentView: View {
                 /// Attaching the popover
                 .swiftUIPopover(isPresented: $showPopover, preferredAttachmentEdge: .top) {
                     PopoverMessageBubble(fill: Color.blue) {
-                        Text("This is a system symbol:\n`Image(systemName: \"globe\")` ! 🙂")
+                        Text("This is an SF Symbol:\n`Image(systemName: \"globe\")` ! 🙂")
                             .foregroundStyle(Color.white)
+                            #if os(watchOS)
+                            .font(.system(size: 14))
+                            #endif
                     }
                 }
             
@@ -34,17 +37,21 @@ struct ContentView: View {
             .spring(response: 0.35, dampingFraction: 0.7, blendDuration: 0),
             value: dragOffset
         )
+        #if !os(tvOS)
         .gesture(
             DragGesture()
                 .updating($dragOffset) { value, state, _ in
                     state = value.translation
                 }
         )
+        #endif
         /// Make sure we actually fill the screen with our view...
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         /// ...to present the popovers of the contained view hierarchy
         .presentPopovers()
+        #if !os(watchOS)
         .padding(4)
+        #endif
     }
 }
 

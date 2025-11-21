@@ -9,11 +9,45 @@
 /* Begin PBXBuildFile section */
 		A02CA9F32ED082FD0003B3A6 /* SwiftUI-Popover in Frameworks */ = {isa = PBXBuildFile; productRef = A02CA9F22ED082FD0003B3A6 /* SwiftUI-Popover */; };
 		A02CAA202ED0CBD10003B3A6 /* SwiftUI-Popover in Frameworks */ = {isa = PBXBuildFile; productRef = A02CAA1F2ED0CBD10003B3A6 /* SwiftUI-Popover */; };
+		A02CAA4B2ED0CD520003B3A6 /* PopoverExample-watchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A02CAA4A2ED0CD520003B3A6 /* PopoverExample-watchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A02CAA612ED0CDCB0003B3A6 /* SwiftUI-Popover in Frameworks */ = {isa = PBXBuildFile; productRef = A02CAA602ED0CDCB0003B3A6 /* SwiftUI-Popover */; };
+		A02CAA7F2ED0CEFC0003B3A6 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = A02CAA7E2ED0CEFC0003B3A6 /* RealityKitContent */; };
+		A02CAA922ED0CF6B0003B3A6 /* SwiftUI-Popover in Frameworks */ = {isa = PBXBuildFile; productRef = A02CAA912ED0CF6B0003B3A6 /* SwiftUI-Popover */; };
+		A02CAA942ED0CF7F0003B3A6 /* SwiftUI-Popover in Frameworks */ = {isa = PBXBuildFile; productRef = A02CAA932ED0CF7F0003B3A6 /* SwiftUI-Popover */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A02CAA4C2ED0CD520003B3A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A02CA9D52ED081FA0003B3A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02CAA492ED0CD520003B3A6;
+			remoteInfo = "PopoverExample-watchOS Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A02CAA572ED0CD540003B3A6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A02CAA4B2ED0CD520003B3A6 /* PopoverExample-watchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A02CA9DD2ED081FA0003B3A6 /* PopoverExample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopoverExample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02CA9F82ED0A13A0003B3A6 /* PopoverExample-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopoverExample-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02CAA452ED0CD520003B3A6 /* PopoverExample-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopoverExample-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02CAA4A2ED0CD520003B3A6 /* PopoverExample-watchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopoverExample-watchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02CAA662ED0CEB90003B3A6 /* PopoverExample-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopoverExample-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02CAA7A2ED0CEFC0003B3A6 /* PopoverExample-visionOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PopoverExample-visionOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02CAA7D2ED0CEFC0003B3A6 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -22,9 +56,40 @@
 			membershipExceptions = (
 				Assets.xcassets,
 				ContentView.swift,
+				"Info-visionOS.plist",
 				PopoverExampleApp.swift,
 			);
 			target = A02CA9F72ED0A13A0003B3A6 /* PopoverExample-macOS */;
+		};
+		A02CAA5F2ED0CD6F0003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-watchOS Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ContentView.swift,
+				"Info-visionOS.plist",
+				PopoverExampleApp.swift,
+			);
+			target = A02CAA492ED0CD520003B3A6 /* PopoverExample-watchOS Watch App */;
+		};
+		A02CAA752ED0CEDA0003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-tvOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ContentView.swift,
+				"Info-visionOS.plist",
+				PopoverExampleApp.swift,
+			);
+			target = A02CAA652ED0CEB90003B3A6 /* PopoverExample-tvOS */;
+		};
+		A02CAA902ED0CF2B0003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-visionOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				ContentView.swift,
+				"Info-visionOS.plist",
+				PopoverExampleApp.swift,
+			);
+			target = A02CAA792ED0CEFC0003B3A6 /* PopoverExample-visionOS */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -33,6 +98,9 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				A02CAA1D2ED0CBB00003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-macOS" target */,
+				A02CAA5F2ED0CD6F0003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-watchOS Watch App" target */,
+				A02CAA752ED0CEDA0003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-tvOS" target */,
+				A02CAA902ED0CF2B0003B3A6 /* Exceptions for "PopoverExample" folder in "PopoverExample-visionOS" target */,
 			);
 			path = PopoverExample;
 			sourceTree = "<group>";
@@ -56,6 +124,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A02CAA472ED0CD520003B3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02CAA612ED0CDCB0003B3A6 /* SwiftUI-Popover in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA632ED0CEB90003B3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02CAA942ED0CF7F0003B3A6 /* SwiftUI-Popover in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA772ED0CEFC0003B3A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02CAA922ED0CF6B0003B3A6 /* SwiftUI-Popover in Frameworks */,
+				A02CAA7F2ED0CEFC0003B3A6 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -64,6 +157,7 @@
 			children = (
 				A02CA9DF2ED081FA0003B3A6 /* PopoverExample */,
 				A02CAA1E2ED0CBD10003B3A6 /* Frameworks */,
+				A02CAA7C2ED0CEFC0003B3A6 /* Packages */,
 				A02CA9DE2ED081FA0003B3A6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,6 +167,10 @@
 			children = (
 				A02CA9DD2ED081FA0003B3A6 /* PopoverExample-iOS.app */,
 				A02CA9F82ED0A13A0003B3A6 /* PopoverExample-macOS.app */,
+				A02CAA452ED0CD520003B3A6 /* PopoverExample-watchOS.app */,
+				A02CAA4A2ED0CD520003B3A6 /* PopoverExample-watchOS Watch App.app */,
+				A02CAA662ED0CEB90003B3A6 /* PopoverExample-tvOS.app */,
+				A02CAA7A2ED0CEFC0003B3A6 /* PopoverExample-visionOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +180,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A02CAA7C2ED0CEFC0003B3A6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				A02CAA7D2ED0CEFC0003B3A6 /* RealityKitContent */,
+			);
+			path = Packages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +236,86 @@
 			productReference = A02CA9F82ED0A13A0003B3A6 /* PopoverExample-macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A02CAA442ED0CD520003B3A6 /* PopoverExample-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02CAA5B2ED0CD540003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-watchOS" */;
+			buildPhases = (
+				A02CAA432ED0CD520003B3A6 /* Resources */,
+				A02CAA572ED0CD540003B3A6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02CAA4D2ED0CD520003B3A6 /* PBXTargetDependency */,
+			);
+			name = "PopoverExample-watchOS";
+			packageProductDependencies = (
+			);
+			productName = "PopoverExample-watchOS";
+			productReference = A02CAA452ED0CD520003B3A6 /* PopoverExample-watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		A02CAA492ED0CD520003B3A6 /* PopoverExample-watchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02CAA5A2ED0CD540003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-watchOS Watch App" */;
+			buildPhases = (
+				A02CAA462ED0CD520003B3A6 /* Sources */,
+				A02CAA472ED0CD520003B3A6 /* Frameworks */,
+				A02CAA482ED0CD520003B3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PopoverExample-watchOS Watch App";
+			packageProductDependencies = (
+				A02CAA602ED0CDCB0003B3A6 /* SwiftUI-Popover */,
+			);
+			productName = "PopoverExample-watchOS Watch App";
+			productReference = A02CAA4A2ED0CD520003B3A6 /* PopoverExample-watchOS Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A02CAA652ED0CEB90003B3A6 /* PopoverExample-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02CAA6E2ED0CEBB0003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-tvOS" */;
+			buildPhases = (
+				A02CAA622ED0CEB90003B3A6 /* Sources */,
+				A02CAA632ED0CEB90003B3A6 /* Frameworks */,
+				A02CAA642ED0CEB90003B3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PopoverExample-tvOS";
+			packageProductDependencies = (
+				A02CAA932ED0CF7F0003B3A6 /* SwiftUI-Popover */,
+			);
+			productName = "PopoverExample-tvOS";
+			productReference = A02CAA662ED0CEB90003B3A6 /* PopoverExample-tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A02CAA792ED0CEFC0003B3A6 /* PopoverExample-visionOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02CAA882ED0CEFE0003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-visionOS" */;
+			buildPhases = (
+				A02CAA762ED0CEFC0003B3A6 /* Sources */,
+				A02CAA772ED0CEFC0003B3A6 /* Frameworks */,
+				A02CAA782ED0CEFC0003B3A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PopoverExample-visionOS";
+			packageProductDependencies = (
+				A02CAA7E2ED0CEFC0003B3A6 /* RealityKitContent */,
+				A02CAA912ED0CF6B0003B3A6 /* SwiftUI-Popover */,
+			);
+			productName = "PopoverExample-visionOS";
+			productReference = A02CAA7A2ED0CEFC0003B3A6 /* PopoverExample-visionOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -144,6 +330,18 @@
 						CreatedOnToolsVersion = 26.1;
 					};
 					A02CA9F72ED0A13A0003B3A6 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					A02CAA442ED0CD520003B3A6 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					A02CAA492ED0CD520003B3A6 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					A02CAA652ED0CEB90003B3A6 = {
+						CreatedOnToolsVersion = 26.1;
+					};
+					A02CAA792ED0CEFC0003B3A6 = {
 						CreatedOnToolsVersion = 26.1;
 					};
 				};
@@ -167,6 +365,10 @@
 			targets = (
 				A02CA9DC2ED081FA0003B3A6 /* PopoverExample-iOS */,
 				A02CA9F72ED0A13A0003B3A6 /* PopoverExample-macOS */,
+				A02CAA442ED0CD520003B3A6 /* PopoverExample-watchOS */,
+				A02CAA492ED0CD520003B3A6 /* PopoverExample-watchOS Watch App */,
+				A02CAA652ED0CEB90003B3A6 /* PopoverExample-tvOS */,
+				A02CAA792ED0CEFC0003B3A6 /* PopoverExample-visionOS */,
 			);
 		};
 /* End PBXProject section */
@@ -180,6 +382,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A02CA9F62ED0A13A0003B3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA432ED0CD520003B3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA482ED0CD520003B3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA642ED0CEB90003B3A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA782ED0CEFC0003B3A6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -203,7 +433,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A02CAA462ED0CD520003B3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA622ED0CEB90003B3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02CAA762ED0CEFC0003B3A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A02CAA4D2ED0CD520003B3A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02CAA492ED0CD520003B3A6 /* PopoverExample-watchOS Watch App */;
+			targetProxy = A02CAA4C2ED0CD520003B3A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A02CA9E62ED081FB0003B3A6 /* Debug */ = {
@@ -342,6 +601,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,6 +634,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,7 +671,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -444,7 +705,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 26.1;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -456,6 +717,230 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A02CAA552ED0CD540003B3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				INFOPLIST_KEY_CFBundleDisplayName = "PopoverExample-watchOS";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A02CAA562ED0CD540003B3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				INFOPLIST_KEY_CFBundleDisplayName = "PopoverExample-watchOS";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A02CAA582ED0CD540003B3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PopoverExample-watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.6;
+			};
+			name = Debug;
+		};
+		A02CAA592ED0CD540003B3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "PopoverExample-watchOS";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.6;
+			};
+			name = Release;
+		};
+		A02CAA6F2ED0CEBB0003B3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Debug;
+		};
+		A02CAA702ED0CEBB0003B3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Release;
+		};
+		A02CAA892ED0CEFE0003B3A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PopoverExample/Info-visionOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-visionOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Debug;
+		};
+		A02CAA8A2ED0CEFE0003B3A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8B6Q9HD754;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PopoverExample/Info-visionOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "quirin.schweigert.PopoverExample-visionOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = xros;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
+				XROS_DEPLOYMENT_TARGET = 26.1;
 			};
 			name = Release;
 		};
@@ -489,6 +974,42 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A02CAA5A2ED0CD540003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-watchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02CAA582ED0CD540003B3A6 /* Debug */,
+				A02CAA592ED0CD540003B3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A02CAA5B2ED0CD540003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02CAA552ED0CD540003B3A6 /* Debug */,
+				A02CAA562ED0CD540003B3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A02CAA6E2ED0CEBB0003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02CAA6F2ED0CEBB0003B3A6 /* Debug */,
+				A02CAA702ED0CEBB0003B3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A02CAA882ED0CEFE0003B3A6 /* Build configuration list for PBXNativeTarget "PopoverExample-visionOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02CAA892ED0CEFE0003B3A6 /* Debug */,
+				A02CAA8A2ED0CEFE0003B3A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
@@ -504,6 +1025,25 @@
 			productName = "SwiftUI-Popover";
 		};
 		A02CAA1F2ED0CBD10003B3A6 /* SwiftUI-Popover */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A02CA9F12ED082FD0003B3A6 /* XCLocalSwiftPackageReference "../../SwiftUI-Popover" */;
+			productName = "SwiftUI-Popover";
+		};
+		A02CAA602ED0CDCB0003B3A6 /* SwiftUI-Popover */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A02CA9F12ED082FD0003B3A6 /* XCLocalSwiftPackageReference "../../SwiftUI-Popover" */;
+			productName = "SwiftUI-Popover";
+		};
+		A02CAA7E2ED0CEFC0003B3A6 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+		A02CAA912ED0CF6B0003B3A6 /* SwiftUI-Popover */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A02CA9F12ED082FD0003B3A6 /* XCLocalSwiftPackageReference "../../SwiftUI-Popover" */;
+			productName = "SwiftUI-Popover";
+		};
+		A02CAA932ED0CF7F0003B3A6 /* SwiftUI-Popover */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A02CA9F12ED082FD0003B3A6 /* XCLocalSwiftPackageReference "../../SwiftUI-Popover" */;
 			productName = "SwiftUI-Popover";

@@ -26,10 +26,17 @@ struct PopoverPresentationModifier: ViewModifier {
                     if let onDismiss = popovers.first(where: { $0.onDismiss != nil })?.onDismiss {
                         Color.black.opacity(0.1).edgesIgnoringSafeArea(.all)
                             .contentShape(Rectangle())
+                            #if !os(tvOS)
                             .simultaneousGesture(
                                 DragGesture(minimumDistance: .zero)
                                     .onChanged({ _ in onDismiss() })
                             )
+                            #else
+                            .simultaneousGesture(
+                                TapGesture()
+                                    .onEnded { onDismiss() }
+                            )
+                            #endif
                     }
                 }
                 .edgesIgnoringSafeArea(.all)

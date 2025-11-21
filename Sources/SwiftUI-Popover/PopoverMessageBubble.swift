@@ -30,7 +30,9 @@ public struct PopoverMessageBubble<Content: View, F: ShapeStyle, S: ShapeStyle>:
                        enableGlassEffect {
                         backgroundShape
                             .fill(fill)
+                            #if !os(visionOS)
                             .glassEffect(in: backgroundShape)
+                            #endif
                     } else {
                         backgroundShape
                             .fill(fill)
