@@ -12,7 +12,7 @@ No UIKit-based hacks. Works across all SwiftUI platforms.
 - **SwiftUI-only** – Implemented entirely with SwiftUI layout, anchors, and geometry.
 - **Composable and scoped** – Popovers exist only inside the view subtree where you call `.presentPopovers()`.
 - **Anchored with arrow** – Arrow follows the effective attachment point of the popover.
-- **Cross-platform** – Designed to run on iOS, macOS, watchOS, tvOS, and visionOS (subject to your `Package.swift`).
+- **Cross-platform** – Designed to run on iOS, macOS, watchOS, tvOS, and visionOS.
 - **Configurable dismissal** – Optional dimming and tap/drag-to-dismiss behavior.
 - **Multiple popovers** – Support for multiple popovers, with an option to make a popover "exclusive".
 
@@ -127,6 +127,65 @@ See the example app in the `Example/` directory.
 A short clip from a production app using `SwiftUI-Popover`:
 
 <img src="Assets/production-app.gif" width="320" />
+
+## Toolbar menu example
+
+You can also use `SwiftUI-Popover` to build lightweight toolbar menus – including on watchOS, where SwiftUI's built-in `Menu` is not available.
+
+<img src="Assets/toolbar-menu.gif" width="320" />
+
+Example toolbar integration:
+
+```swift
+import SwiftUI_Popover
+import SwiftUI
+
+struct ToolbarMenuExample: View {
+    @State private var showToolbarMenu = false
+    
+    var body: some View {
+        NavigationStack {
+            Text("Toolbar menu example")
+                .navigationTitle("Inbox")
+                .toolbar {
+                    #if os(watchOS)
+                    let placement: ToolbarItemPlacement = .topBarTrailing
+                    #else
+                    let placement: ToolbarItemPlacement = .automatic
+                    #endif
+                    
+                    ToolbarItem(placement: placement) {
+                        Button {
+                            withAnimation { showToolbarMenu = true }
+                        } label: {
+                            Image(systemName: "ellipsis")
+                        }
+                        .swiftUIPopover(
+                            isPresented: $showToolbarMenu,
+                            disableDelay: true,
+                            isExclusive: true,
+                            isDismissible: true
+                        ) {
+                            PopoverMessageBubble(fill: .clear, enableGlassEffect: true) {
+                                VStack(alignment: .leading) {
+                                    Group {
+                                        Button("Lightning", systemImage: "bolt.fill", action: { })
+                                        Button("Sleep", systemImage: "moon.fill", action: { })
+                                    }
+                                    .padding()
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+        .presentPopovers()
+    }
+}
+```
+
+The included example project also features a toolbar menu and demonstrates the coordination of 
+multiple popovers.
 
 ---
 

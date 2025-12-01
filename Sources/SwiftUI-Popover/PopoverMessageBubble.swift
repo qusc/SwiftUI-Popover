@@ -5,7 +5,11 @@
 import SwiftUI
 
 public struct PopoverMessageBubble<Content: View, F: ShapeStyle, S: ShapeStyle>: View {
-    let cornerRadius: CGFloat = 22
+    #if os(watchOS)
+    let cornerRadius: CGFloat = 16
+    #else
+    let cornerRadius: CGFloat = 20
+    #endif
 
     var showArrow: Bool = true
     var fill: F
@@ -106,18 +110,41 @@ public extension PopoverMessageBubble where S == Never {
         self.init(fill: fill, secondaryFill: nil, padding: padding, content: content)
     }
     
-    init(fill: F, padding: EdgeInsets, @ViewBuilder content: @escaping () -> Content) {
-        self.init(fill: fill, secondaryFill: nil, padding: padding, content: content)
+    init(
+        fill: F,
+        enableGlassEffect: Bool = false,
+        padding: EdgeInsets = PopoverConstants.defaultPadding,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
+        self.init(
+            fill: fill,
+            secondaryFill: nil,
+            enableGlassEffect: enableGlassEffect,
+            padding: padding,
+            content: content
+        )
+    }
+}
+
+@available(iOS 17.0, *)
+public extension PopoverMessageBubble where F == Color, S == Never {
+    init(
+        padding: EdgeInsets = PopoverConstants.defaultPadding,
+        @ViewBuilder content: @escaping () -> Content
+    ) {
+        self.init(
+            fill: Color.clear,
+            secondaryFill: nil,
+            enableGlassEffect: true,
+            padding: padding,
+            content: content
+        )
     }
 }
 
 public struct MessageBubbleShape: Shape {
     public struct Constants {
-        #if os(watchOS)
-        static let arrowSize: CGFloat = 12
-        #else
         static let arrowSize: CGFloat = 9
-        #endif
         
         static let arrowPath: Path = MessageBubbleShape.arrowPath(size: arrowSize)
     }
@@ -138,7 +165,7 @@ public struct MessageBubbleShape: Shape {
             let cornerSize: CGSize = .init(width: cornerRadius, height: cornerRadius)
             path.addRoundedRect(in: rect, cornerSize: cornerSize, style: .circular)
 
-            let maxOffset = max(0, rect.width / 2 - Constants.arrowSize * 1.5 - cornerRadius)
+            let maxOffset = max(0, rect.width / 2 - Constants.arrowSize - cornerRadius)
             
             let arrowOffsetX: CGFloat =
                 (-maxOffset...maxOffset).clamp(arrowOffset.x - rect.width / 2)
@@ -168,7 +195,13 @@ public struct MessageBubbleShape: Shape {
 
             }
 
-            path.addPath(Constants.arrowPath, transform: transform)
+            if #available(iOS 17, *) {
+                let arrow = Constants.arrowPath.applying(transform)
+                path = path.union(arrow)
+            } else {
+                path.addPath(Constants.arrowPath, transform: transform)
+            }
+            
         }
     }
     
